@@ -1,0 +1,324 @@
+.container.thirdcontainer {
+    width: 100%;
+} 
+h4 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+}
+.photo-points-space {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+.photopoints-info {
+    border-bottom: 1px dashed #cac9c9;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin: 30px 0 30px 0;
+    color: #246f24;
+}
+.row.second-view-space
+ p {
+    font-weight: bold;
+}
+.thirdoption-year:first-child {
+    border: 0;
+}
+.winter {
+    text-align: right;
+    border-top: 1px solid #eaeaea;
+}
+
+.winter .btn {
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+
+}
+.winter .col-sm-2 {
+    padding: 0;
+    text-align: center;
+}
+.photo-points-winter {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.photo-points-winter h4 {
+    line-height: 90px;
+    vertical-align: middle;
+    display: block;
+}
+
+.photo-points-space {
+    border-top: 1px solid #eaeaea;
+}
+.year-winter-list {
+    padding-left: 0;
+}
+.second-view{
+    margin: 20px 0;
+}
+.yearlist {
+    /*width: 2000px;*/
+    margin: 0;
+}
+.yearlist-c{
+
+    margin: 0;
+}
+.year-con{
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    height: 37px;
+    position: relative;
+}
+.year-winter-list ul
+ li {
+    display: inline-block;
+    width: 200px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    
+}
+.year-winter-list ul
+ li img{
+    width: 100%;
+    max-height: 140px;
+    min-height: 140px;
+ }
+.csectionview .winterview-list li ul li {
+    width: 200px!important;
+    padding: 0 2px;
+}
+
+.year-winter-list li.season-group {
+    width: 440px!important;
+}
+.thirdoption-years li {
+    min-width: 800px;
+    padding-left: 0!important;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+.thirdoption-view li:nth-child(4n){
+    margin-right: 5px;
+}
+.space-photo-points{
+    padding: 18px 0;
+    border-top: 1px solid #eaeaea;
+/*    width: 2000px;*/
+}
+
+.yearlist.second-img-view, .photo-pointssecond,.yearlist-c.second-img-view{
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+}
+
+.winterview-list {
+    margin: 0 0 25px 0;
+   /* width: 2000px;*/
+}
+.photo-points-id{
+    padding: 38px 0 0 0;
+    text-align: center;
+    min-height: 140px;
+    margin-bottom: 25px;
+}
+.winter h4 {
+    margin: 0;
+    padding: 10px 0 9px;
+    min-height: 34px;
+}
+/*---=== option B select ===---*/
+
+.viwe-option img {
+    width: 35px;
+    display: inline-block;
+}
+.viwe-option a {
+    display: inline-block;
+    line-height: 55px;
+}
+.thirdoption-year {
+    border-top: 1px solid #eaeaea;
+}
+.thirdoption-view .winterview-list li
+ a {
+    min-height: auto;
+    display: inline-block;
+    line-height: 115px;
+}
+.season-space{
+    min-height: 169px;
+    padding: 30px 0;
+    margin-bottom: 0;
+}
+.second-view .winter-img.spring-view ul {
+    margin-bottom: 0;
+    width: 1500px;
+    border-bottom: 1px dashed #eaeaea;
+    padding:15px 0;
+}
+.photo-points-border {
+    border-top: 1px solid #eaeaea;
+
+    margin-top: 15px;
+    margin-bottom: 35px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.thirdoption-scroll {
+    height: 579px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.yearlist-section li {
+    width: 187px;
+    display: inline-block;
+}
+.Asectionview {
+    overflow-x: scroll;
+}
+
+.yearlist-section {
+    width: 1500px;
+}
+.Asectionview .photo-points-space{
+    margin-top: 20px;
+    margin-bottom: 0; 
+}
+.second-view-space.season-space.thirdview{
+    padding: 30px 0 0 0;
+    min-height: 152px;
+    margin-bottom: 20px;
+    line-height: 60px;
+}
+.second-view-space p {
+    margin: 30px 0 10px;
+}
+img.loader {
+    width: auto;
+    max-width: 80px;
+    margin: 0 auto;
+}
+
+.loading-img {
+    text-align: center;
+    padding: 40px 0;
+}
+.winterview-list li
+ a {
+    min-height: 104px;
+    display: inline-block;
+    line-height: 150px;
+}
+.viwe-option .active {
+    border-bottom: 2px solid #256f24;
+}
+ul.season-list {
+    width: 850px;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+body .year-winter-list .season-area .season-list li {
+    width: 24%!important;
+    display: inline-block;
+    text-align: center;
+}
+
+.season-list li {
+    width: 195px!important;
+    text-align: center;
+    font-weight: bold;
+}
+.photo-points-border .year-winter-list li.season-group.third-views {
+    width: 850px!important;
+    vertical-align: top;
+}
+
+.year-winter-list .winterview-list .img-cover{
+    min-height: 140px!important;
+    max-height: 140px!important;
+    text-align: center;
+}
+.year-winter-list .winterview-list .img-cover img{
+    height: auto;
+    min-height: auto;
+    margin: 0 auto;
+}
+#sarea{
+    max-width: 100%;
+    overflow-y: scroll;
+}
+.year-img-con{
+    position: relative;
+}
+#year-list{
+    position: absolute;
+}
+.season-view {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid #eaeaea;
+}
+.season-view-list{
+    position: absolute;
+}
+.year-pad {
+    margin-right: 0;
+    padding-right: 0;
+}
+.year-pad .photo-pointssecond,.year-pad .photo-pointssecond{
+    margin-bottom: 0!important;
+}
+.second-view .year-con {
+    height: 39px;
+    border-bottom: 1px solid #eaeaea;
+}   
+.second-view  .season-view {
+    border:0;
+}
+.third-view .year-img-con .year-con{
+    height: 40px;
+border-bottom: 1px solid #eaeaea;
+}
+@media only screen and (max-width: 767px) {
+
+.row.photo-points-winter h4{
+    line-height: normal;
+    padding-bottom: 10px;
+}
+.row.photo-points-winter{
+    margin-top: 10px;
+}
+.second-option-id {
+    line-height: 32px;
+}
+/*--section C--*/
+.row.photo-points-space
+ h4 {
+    font-size: 12px;
+    padding: 0;
+}
+.row.photo-points-space .col-xs-2 {
+    padding-left: 0;
+}
+}
+
+@media only screen and (max-width: 767px) {
+
+.row.photo-points-winter{
+    margin-bottom: 15px;
+}
+.row.photo-points-space{
+    margin-bottom: 20px;
+}
+}

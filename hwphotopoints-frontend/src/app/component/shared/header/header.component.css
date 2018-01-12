@@ -1,0 +1,115 @@
+
+.photopoints-logo {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+.photopoints-logo a {
+    display: inline-block;
+    color: #246f24;
+    cursor: pointer;
+}
+.photopoints-logo a:hover{
+    color: #104810;
+}
+.photopoints-description {
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 100;
+    color: #333;
+    display: block;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #246f24;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.navbar-default .navbar-nav>li.active a {
+    color: #fff;
+    background-color: #104810;
+    border: 0;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #fff;
+}
+.navbar-default .navbar-nav>li:hover{
+    background-color: #104810;
+}
+.navbar-right {
+    margin-top: 0;
+}
+.btn {
+    padding: 14px 25px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.navbar-header {
+    width: 100%;
+}
+
+button a{
+    color: #fff;
+}
+
+.navbar-collapse{
+    padding: 0;
+}
+.navbar-right {
+    margin-right: 0;
+}
+.menu-toggle {
+    text-align: right;
+    float: right;
+    display: inline-block;
+}
+.mobileview{
+    display: inline-block;
+}
+.menu-toggle .navbar-toggle {
+    float: none;
+    margin-right: 0;
+}
+.active .collapse {
+    display: none;
+}
+/*---=== Media Query Start Here ---===*/
+@media only screen and (max-width: 767px) {
+   .navbar-nav {
+        margin: 7.5px 0;
+    }
+    .loginpage-layout{
+        width: 100%;
+    }
+    .photopoints-logo{
+        font-size: 32px;
+    }
+    .photopoints-description{
+        font-size: 12px;
+    }
+    .navbar-default .navbar-toggle {
+    border-color: #246f24;
+    background-color: #246f24;
+    color: #fff;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: #246f24;
+    }
+    .navbar-toggle {
+    padding: 14px 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .photopoints-logo{
+        font-size: 26px;
+    }
+    .loginpage-layout{
+    padding: 25px;
+    }
+}

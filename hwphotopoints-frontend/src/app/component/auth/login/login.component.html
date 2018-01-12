@@ -1,0 +1,32 @@
+<!-- === Login page === -->
+<div class="container ">
+  <h2 class="login-title">{{title}}</h2>
+</div>
+<div class="container loginpage-layout">
+  <!-- === Enter Email and Password for Login === -->
+
+    <form [formGroup]="logininfo" (ngSubmit)="onSubmit(logininfo.value,logininfo.valid)">
+      <p class="loginerror">{{loginerror}}</p>
+      <div class="form-group login-email">
+        <input type="email" placeholder="email" class="form-control" id="email" name="email" formControlName="email">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </div>
+      <div class="form-group login-password login-email">
+        <input type="password" placeholder="password" class="form-control" id="password" name="password" formControlName="password">
+        <i class="fa fa-lock" aria-hidden="true"></i>
+      </div>
+    <!-- === Remember and Forgate-Password ===-->
+      <div class="form-group row checkbox">
+        <div class="col-xs-12">
+         <input formcontrolname="sidekick" type="checkbox" ng-reflect-name="sidekick" class="" name="checkbox"><span>Remember me</span>
+      </div>
+       
+      </div>
+    <!-- === Link For Login and Forget-Pasword === -->
+     	<div class="form-group login-signup-link">
+  	      <button type="submit" class="btn btn-success" [disabled]="!logininfo.valid">Login</button>
+          <a class="btn btn-success"  routerLink="/recoverpassword">Forget Password ?</a>
+    	</div>
+
+    </form>
+ </div>

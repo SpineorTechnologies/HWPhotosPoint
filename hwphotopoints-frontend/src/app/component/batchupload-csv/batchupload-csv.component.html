@@ -1,0 +1,104 @@
+<div class="container">
+	<h2>Multiple Images Upload</h2>
+
+	<div class="row instruction">
+<div class="col-sm-8 col-sm-offset-4">
+		<h4>Please follow these instructions for batch upload.</h4>
+		<ul>
+			<li>Select "Choose Multiple Files" option to upload the batch of images. </li>
+			<li>Please click the "Upload" button to upload the images.</li>
+			<li>After image upload, you will see a link to a CSV file.</li>
+			<li>Click on the link to download and save the CSV file to your PC.</li>
+			<li>Update the downloaded CSV with image information.</li>
+			<li>For series enter P, S or L</li>
+			<li>For year enter the full year e.g. 2018</li>
+			<li>For location, enter full name e.g. P001A</li>
+			<li>For season enter WIN, SPR, SUM or AUT</li>
+			<li>For image type enter SIN or PAN for single or panoramic</li>
+			<li>For view enter full description e.g. S120 or PAN001</li>
+			<li>Click on "Upload CSV" button.</li>
+			<li>Click on "Choose CSV File", select the CSV file with image data and then click upload."</li>
+
+		</ul>	
+	</div>	
+	</div>
+	<div class="tabs-section">
+	<div class="text-center tab-btn">
+		<button type=""  class="btn btn-success" [class.active]="thisActive" (click)="activeimage('img')">Upload Images </button>
+		<button type="" class="btn btn-success" [class.active]="!thisActive" (click)="activeimage('csv')">Upload CSV</button>	
+	</div>
+	<div class="row error text-center">
+		{{error}}
+	</div>
+	<div class="row after-upload text-center">
+		<p [innerHTML]="theHtmlString"></p>
+	</div>
+	<div class="row " *ngIf="imageUploded">
+		
+		<form #imageinfo="ngForm"  >
+			<!-- === Multiple Images upload ===-->
+			<div class="col-sm-12 photo-id form-group text-center" *ngIf="thisActive">
+				<input name="myFile" #fileInput class="image-upload" type="file" hidden (change)="uploadFile($event)" ngModel accept="image/*" multiple/>
+				<div class="choose-file">
+					<p><i class="fa fa-cloud-upload" aria-hidden="true"></i></p>
+					<a (click)="chooseFileEnable()"  class="btn btn-success">Choose Multiple Files</a>
+						
+				</div>
+			</div>
+		<div class="row file-show">
+			<ul class="images-list">
+				<li *ngFor="let image of imagesList; let i = index">
+					<img [src]="image">
+					<p>{{imagesName[i]}}</p>
+				</li>
+			</ul>						
+		</div>
+
+		<!-- ==loaging img== -->
+		<div class="progress" *ngIf="progressStatus">
+			<div id="myProgress">
+			  <div id="myBar" [style.width]="progressingWidth">{{progressingWidth}}</div>
+			</div>
+		</div>
+
+		<div class="form-group form-controls text-center controls-area">
+			<!-- <img class="loader" src="../../../assets/images/loader.gif" *ngIf="loadingimg"> -->
+			<!-- === Button for save and cancle the process === -->
+			<button [disabled]="disabledButton"  (click)="onSubmit(imageinfo.value)" type="submit" class="btn btn-success pull-right" *ngIf="formSubmit">Upload</button>
+			<button type="" (click)="flushSelectedData()" class="btn btn-success pull-right cancel"  *ngIf="imageUplodedStatus">Cancel</button>
+		</div>
+	</form>
+	
+	</div>
+	<div *ngIf="csvUploded">
+		<form #csvinfo="ngForm"   >
+			
+			<!-- ===CSV File upload===-->
+			<div class="col-sm-12 form-group photo-id text-center">
+				<input name="myFile" #CsvfileInput class="image-upload" type="file" hidden (change)="uploadCsvFile($event)" ngModel accept=".csv"/>
+					<div class="choose-file">
+						<p><i class="fa fa-cloud-upload" aria-hidden="true"></i></p>
+						<a (click)="choosecsvEnable()"  class="btn btn-success">Choose CSV File</a>
+						<div class="img-info">
+							<p>{{CsvName}}</p>
+						</div>
+					</div>
+					<div class="progress" *ngIf="progressStatus">
+						<div id="myProgress">
+						  <div id="myBar" [style.width]="progressingWidth">{{progressingWidth}}</div>
+						</div>
+					</div>	
+			</div>
+			
+			<!-- ==loaging img== -->
+			<div class="form-group form-controls text-center controls-area">
+				<!-- <img class="loader" src="../../../assets/images/loader.gif" *ngIf="loadingimg"> -->
+				<!-- === Button for save and cancle the process === -->
+				<button [disabled]="disabledButton" type="submit" class="btn btn-success pull-right" *ngIf="formSubmit" (click)="onCsvSubmit(csvinfo.value)">Upload</button>
+				<button type="" (click)="flushSelectedData()" class="btn btn-success pull-right cancel"  *ngIf="imageUplodedStatus">Cancel</button>
+			</div>
+		</form>
+	</div>
+
+	</div>
+</div>

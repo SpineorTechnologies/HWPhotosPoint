@@ -1,0 +1,57 @@
+<div class="container">
+  <h2 class="thumbpoints-title">{{title}}</h2>
+  <div class="row imagedawnload">
+		<div class="col-xs-12 col-sm-4 " *ngIf="imageView">  
+			<p>{{imageName}}</p> 
+		</div>
+	 <!-- === Delete and dawnload image link ===-->
+		<div class="col-xs-12 col-sm-8 text-right" *ngIf="imageView"> 
+			<a *ngIf="userPermissions" routerLink="/updateimage/{{imageId}}" >Edit Image</a> 
+			
+			<a *ngIf="userPermissions" (click)="deleteImage()">Delete Image</a> 
+
+			<a target="_blank" href="{{imageUrl}}" download="{{imageUrl}}">
+		    Download Image</a>
+		</div>
+	</div>
+
+	<div class="row" class="message" *ngIf="Message">
+		<div class="col-xs-12">  
+			<h3>{{Message}}</h3>
+		</div>
+	</div>
+
+	<div class="row" *ngIf="imageView">
+		<img src="{{imageUrl}}" />
+	</div>
+
+	<!-- === Image detail info ===-->
+	  <div class="row imagedetails" *ngIf="imageView">
+		<div class="col-xs-6">  
+			<a  (click)="showExifdata()" >Show Exif Data</a> 
+			<ul *ngIf="exifData">
+		  		<li *ngFor="let data of exifArray;">
+		  			 {{data.key}} : {{data.val}}
+		  		</li>
+			</ul>
+		</div>
+		<div class="col-xs-6">  
+		  	<a  (click)="showFiledata()" >Show File Data</a> 
+		  	<ul *ngIf="fileData">
+				<li><strong>Uploaded By:</strong> {{allFileData.uploaded_by}}</li>
+		  		<li><strong>ID:</strong> {{allFileData.id}}</li>
+				<li><strong>File Name:</strong> {{allFileData.file_name}}</li>
+				<li><strong>Original Image Location:</strong> {{allFileData.file_location_aws}}</li>
+				<li><strong>Thumb Image Location:</strong> {{allFileData.file_thumb_location_aws}}</li>
+				<li><strong>Series:</strong> {{allFileData.series}}</li>
+				<li><strong>Post Name:</strong> {{allFileData.post_name}}</li>
+				<li><strong>Year:</strong> {{allFileData.year}}</li>
+				<li><strong>Season: </strong>{{allFileData.season}}</li>
+				<li><strong>Image View:</strong> {{allFileData.image_view}}</li>
+				<li><strong>Views:</strong> {{allFileData.views}}</li>
+				<li><strong>Uploaded Date:</strong> {{allFileData.uploading_date}}</li>
+				
+		  	</ul>
+		</div>
+	</div>
+</div>
